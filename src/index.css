@@ -1,0 +1,145 @@
+/* Self-hosted fonts - no network dependency */
+@import '@fontsource/syne/400.css';
+@import '@fontsource/syne/500.css';
+@import '@fontsource/syne/600.css';
+@import '@fontsource/syne/700.css';
+@import '@fontsource/syne/800.css';
+@import '@fontsource/dm-sans/300.css';
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/600.css';
+@import "tailwindcss";
+
+/* ─── CSS Variables ─── */
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --color-indigo: #6366f1;
+  --color-purple: #a855f7;
+  --color-pink: #ec4899;
+}
+
+/* ─── Reset ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 99px; }
+
+/* ─── Selection ─── */
+::selection { background: #6366f1; color: #fff; }
+
+/* ─── Typography ─── */
+.font-display { font-family: var(--font-display) !important; }
+
+/* ─── Gradient text ─── */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* ─── Dot grid bg ─── */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(99,102,241,0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ─── Typing cursor ─── */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: #6366f1;
+  margin-left: 1px;
+}
+
+/* ─── Animations ─── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes float-y-slow {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-7px); }
+}
+
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0.35), 0 0 28px rgba(99,102,241,0.25); }
+  50%       { box-shadow: 0 0 0 10px rgba(99,102,241,0), 0 0 48px rgba(99,102,241,0.45); }
+}
+
+.animate-float      { animation: float-y 3.6s ease-in-out infinite; }
+.animate-float-slow { animation: float-y-slow 5s ease-in-out infinite; }
+.animate-pulse-ring { animation: pulse-ring 2.4s ease-in-out infinite; }
+
+/* ─── Timeline ─── */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 46px;
+  bottom: -24px;
+  width: 2px;
+  background: linear-gradient(to bottom, #6366f1 0%, transparent 100%);
+}
+
+/* ─── Glass ─── */
+.glass {
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+}
+
+/* ─── Card hover ─── */
+.card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(99,102,241,0.18);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* Responsive grid helpers (used via className on divs) */
+@media (max-width: 1024px) {
+  .max-lg\:grid-cols-1 { grid-template-columns: 1fr !important; }
+  .max-lg\:grid-cols-2 { grid-template-columns: repeat(2,1fr) !important; }
+}
+@media (max-width: 768px) {
+  .max-md\:grid-cols-1 { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 640px) {
+  .max-sm\:grid-cols-1 { grid-template-columns: 1fr !important; }
+  .hidden.lg\:block    { display: none !important; }
+}
