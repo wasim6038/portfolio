@@ -106,6 +106,19 @@ export const experience = [
 export const projects = [
   {
     id: 1,
+    title: "MealSnap AI Powered Nutrition App",
+    description:
+      "An AI-powered nutrition app that analyzes meal photos or names to provide calorie estimates, nutritional breakdowns, and healthy eating suggestions.",
+    techStack: ["JavaScript", "HTML", "CSS", "React.js", "Node.js", "Express.js", "MongoDB", "Gemini APIs"],
+    github: "https://github.com/wasim6038/mealsnap-frontend",
+    live: "https://mealsnap-frontend.vercel.app/login",
+    category: "Full Stack",
+    featured: true,
+    color: "from-violet-500 to-purple-700",
+    icon: "📋",
+  },
+  {
+    id: 2,
     title: "Kanban Board",
     description:
       "A drag-and-drop task management board with real-time updates, column management, and smooth interactions.",
@@ -118,14 +131,14 @@ export const projects = [
     icon: "📋",
   },
   {
-    id: 2,
+    id: 7,
     title: "Real-Time Location Tracker",
     description:
       "Live location tracking using Socket.io and Leaflet.js. Tracks multiple users in real-time on an interactive map.",
     techStack: ["Node.js", "Socket.io", "Leaflet.js", "Express.js", "JavaScript"],
     github: "https://github.com/wasim6038/RealTime-Tracker",
     live: "https://real-time-tracker-ten-sooty.vercel.app",
-    category: "Full Stack",
+    category: "Backend",
     featured: true,
     color: "from-blue-500 to-cyan-600",
     icon: "📍",
@@ -177,7 +190,7 @@ export const projects = [
     techStack: ["Node.js", "Express.js", "MongoDB", "JavaScript"],
     github: "https://github.com/wasim6038",
     live: "https://collibet.com/",
-    category: "Backend",
+    category: "Full Stack",
     featured: false,
     color: "from-indigo-500 to-blue-600",
     icon: "📊",
