@@ -105,6 +105,19 @@ export const experience = [
 
 export const projects = [
   {
+    id: 8,
+    title: "School Platform",
+    description:
+      "A comprehensive school platform with Admin CMS featuring user authentication, role-based access, and updating various school-related data. ",
+    techStack: ["JavaScript", "HTML", "CSS", "React.js", "Node.js", "Express.js", "MongoDB", "JWT", "REST APIs", "Framer Motion", "Tailwind CSS", "Redux Toolkit",],
+    github: "https://github.com/wasim6038/school-frontend",
+    live: "https://school-frontend-one-tau.vercel.app/",
+    category: "Full Stack",
+    featured: true,
+    color: "from-emerald-500 to-teal-600",
+    icon: "📋",
+  },
+  {
     id: 1,
     title: "MealSnap AI Powered Nutrition App",
     description:
@@ -127,7 +140,7 @@ export const projects = [
     live: "https://kanban-board-inky-delta.vercel.app/",
     category: "Frontend",
     featured: true,
-    color: "from-violet-500 to-purple-700",
+    color: "from-pink-500 to-rose-600",
     icon: "📋",
   },
   {
@@ -246,7 +259,7 @@ export const stats = [
   { value: "1+",  label: "Years Experience" },
   { value: "10+", label: "Projects Built"   },
   { value: "3+",  label: "Production Apps"  },
-  { value: "8.05",label: "CGPA"             },
+  { value: "8.24",label: "CGPA"             },
 ];
 
 export const education = [
@@ -255,7 +268,7 @@ export const education = [
     institution: "M.L.V Textile & Engineering College",
     location: "Bhilwara, Rajasthan",
     year: "Nov 2022 – May 2026",
-    grade: "CGPA: 8.05",
+    grade: "CGPA: 8.24",
     color: "from-violet-500 to-indigo-600",
   },
   {
