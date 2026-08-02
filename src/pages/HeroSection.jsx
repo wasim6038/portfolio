@@ -8,7 +8,7 @@ const ROLES = ['Full Stack Developer','MERN Stack Expert','React.js Developer','
 
 const CODE = `const wasim = {
   role: "Junior Developer",
-  stack: ["React","Node","MongoDB"],
+  stack: ["React","Node","Express", "MongoDB"],
   status: "Currently Working 💼",
   passion: "Building cool apps 🚀"
 };`;
@@ -108,7 +108,9 @@ const HeroSection = () => {
               </motion.button>
 
               <motion.a whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-                href="#"
+                href="https://drive.google.com/file/d/12XsI5d4VxFlyH2JPQ69FJNJOpaZo-xIQ/view?usp=sharing"
+                target="_blank" 
+                rel="noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', gap: 7,
                   padding: '11px 22px', borderRadius: 11,

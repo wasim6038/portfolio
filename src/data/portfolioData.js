@@ -36,6 +36,7 @@ export const skills = [
       { name: "Node.js",       level: 85 },
       { name: "Express.js",    level: 85 },
       { name: "REST API",      level: 88 },
+      { name: "Redis",         level: 74 },
       { name: "Authentication",level: 80 },
     ],
   },

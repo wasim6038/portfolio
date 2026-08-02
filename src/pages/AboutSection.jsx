@@ -32,7 +32,7 @@ const AboutSection = () => {
               {[
                 "I'm a passionate Full Stack Developer specializing in the MERN stack. I love building fast, scalable, and beautiful web applications that solve real-world problems.",
                 "During my 6-month internship at Executehub Technologies, I worked on production projects including Oneseva, Collibet, and a Learning Management System.",
-                "Currently pursuing B.Tech in IT with a CGPA of 8.05, I believe in writing clean code and building user-focused applications.",
+                "Currently pursuing B.Tech in IT with a CGPA of 8.24, I believe in writing clean code and building user-focused applications.",
               ].map((t, i) => (
                 <p key={i} style={{ fontSize:'0.9rem', lineHeight:1.75, color:textSub, marginBottom:i<2?12:0 }}>{t}</p>
               ))}
