@@ -14,14 +14,14 @@ const AppContent = () => {
   const { isDark } = useTheme();
   return (
     <div style={{ fontFamily: "'DM Sans', sans-serif" }}
-         className={isDark ? 'bg-[#07080f] text-white' : 'bg-white text-gray-900'}>
+         className={`min-h-screen ${isDark ? 'bg-[#0b0f17] text-slate-100' : 'bg-[#f8fafc] text-slate-900'}`}>
       <Navbar />
       <main>
         <HeroSection />
         <AboutSection />
-        <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
+        <SkillsSection />
         <ServicesSection />
         <ContactSection />
       </main>
